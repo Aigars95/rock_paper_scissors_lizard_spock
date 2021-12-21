@@ -79,6 +79,7 @@ export default defineComponent({
       this.userChoice = weapons[0].image;
       this.cpuChoice = weapons[0].image;
       this.winOrLoseMessage = "Choose your weapon to start";
+
     },
     chooseWeapon(num: number) {
       this.weaponDisable = true;
@@ -87,6 +88,7 @@ export default defineComponent({
       this.cpuChoice = weapons[0].image;
       const rand = Math.floor(Math.random() * 5);
       const gameResult = weapons[num].name + weapons[rand].name;
+      this.winOrLoseMessage= 'Hmm....';
       let messageResult = "";
       switch (gameResult) {
         case "RockLizard":
